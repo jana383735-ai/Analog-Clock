@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.clock{
+    width: 30rem;
+    height: 30rem;
+
+    /* Change this line according to your image location */
+    background: url("analogclock.jpeg") no-repeat center;
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.hour,
+.minute,
+.second{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transform-origin: center center;
+}
+
+/* Hour Hand */
+.hour{
+    width: 160px;
+    height: 160px;
+}
+
+.hour::before{
+    content: "";
+    width: 6px;
+    height: 80px;
+    background: #555;
+    border-radius: 10px;
+}
+
+/* Minute Hand */
+.minute{
+    width: 220px;
+    height: 220px;
+}
+
+.minute::before{
+    content: "";
+    width: 4px;
+    height: 110px;
+    background: dodgerblue;
+    border-radius: 10px;
+}
+
+/* Second Hand */
+.second{
+    width: 260px;
+    height: 260px;
+}
+
+.second::before{
+    content: "";
+    width: 2px;
+    height: 130px;
+    background: crimson;
+    border-radius: 10px;
+}
